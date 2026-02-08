@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "betropolitan",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -73,6 +73,10 @@
     "three": "latest",
     "url": "latest",
     "vaul": "^0.9.9",
+    "viem": "^2.x",
+    "wagmi": "^2.5.7",
+    "@rainbow-me/rainbowkit": "^2.0.1",
+    "@tanstack/react-query": "^5.25.0",
     "zod": "3.25.67"
   },
   "devDependencies": {

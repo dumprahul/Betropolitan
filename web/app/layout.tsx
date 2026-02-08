@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Providers } from "./providers";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -10,9 +10,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skal Ventures",
-  description: "Investment strategies that outperform the market",
-    generator: 'v0.app'
+  title: "Betropolitan — Prediction Markets",
+  description: "Bet on outcomes. Trade YES/NO tokens on real-world events. Create markets. Earn when you're right.",
 };
 
 export default function RootLayout({
@@ -26,8 +25,10 @@ export default function RootLayout({
         className={`${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Header />
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

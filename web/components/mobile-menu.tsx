@@ -5,6 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { ConnectWallet } from "./connect-wallet";
 
 interface MobileMenuProps {
   className?: string;
@@ -14,10 +15,9 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Insights", href: "#insights" },
-    { name: "Contact", href: "#contact" },
+    { name: "Markets", href: "#markets" },
+    { name: "Create", href: "#create" },
+    { name: "How it Works", href: "#how-it-works" },
   ];
 
   const handleLinkClick = () => {
@@ -71,13 +71,7 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
             ))}
 
             <div className="mt-6">
-              <Link
-                href="/#sign-in"
-                onClick={handleLinkClick}
-                className="inline-block text-xl font-mono uppercase text-primary transition-colors ease-out duration-150 hover:text-primary/80 py-2"
-              >
-                Sign In
-              </Link>
+              <ConnectWallet variant="mobile" />
             </div>
           </nav>
         </Dialog.Content>
